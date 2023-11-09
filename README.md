@@ -12,7 +12,11 @@ I am going to create a function or a set of functions that generate a connected 
 ## Recurrence Analysis
 
 ## References
-Found by Jacob
+Found by Jacob, shows how to use random number generator in JavaScript
 https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/
 
 Jacob: Make sure the random makes an Int, not a Double
+
+For assistance with tracking connected Nodes via a Set
+https://stackoverflow.com/questions/42739256/how-get-random-item-from-es6-map-or-set
+https://www.w3schools.com/js/js_object_sets.asp

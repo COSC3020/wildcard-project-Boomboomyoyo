@@ -5,7 +5,7 @@ eval(fs.readFileSync('code.js')+'');
 
 const test =
     jsc.forall("nat", function(int) {
-        console.log("Nodes: " + Math.max(int,1))
+        //console.log("Nodes: " + Math.max(int,1))
         graph = connectedGraph(Math.max(int,1))
         //console.log(graph)
         return isConnected(graph)
@@ -24,13 +24,13 @@ function isConnected(graph)
     {
         // For the next node in the known set of connected nodes, iterate over each of its edges and
         // mark any node that it has an edge to, if it isn't in the connected list.
-        for(j = 0; j < graph[connected[i]].length; j++)
+        for(j = 0; j < graph.length; j++)
         {
             // Had an issue where there would be a single undefined pushed into the connected list.
             // This guards against that
-            if(!connected.includes(graph[connected[i]][j]) && !(graph[connected[i]][j] == undefined))
+            if(!connected.includes(j) && graph[connected[i]][j] == 1)
             {
-                connected.push(graph[connected[i]][j])
+                connected.push(j)
             }
         }
     }
@@ -41,6 +41,8 @@ function isConnected(graph)
         return true
     } else
     {
+        //console.log(connected)
+        //console.log(graph)
         return false
     }
 
